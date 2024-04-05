@@ -1,7 +1,3 @@
-spring:
-  application:
-    name: Config-Prod
-
 # eureka Client Configurations 
 eureka: 
   instance:
