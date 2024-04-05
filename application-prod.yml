@@ -1,7 +1,9 @@
 spring:
   application:
     name: config-prod-file
-eureka:
+
+# eureka Client Configurations  -> RATING-SERVICE
+eureka: 
   instance:
     prefer-ip-address: true
   client:
@@ -9,3 +11,14 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+      
+      
+# Actuator Configurations  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # Expose all endpoints
+  endpoint:
+    health:
+      show-details: always # Show full health details
